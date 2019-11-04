@@ -75,3 +75,10 @@ table {
 .buttonContainer {
   text-align: center;
 }
+
+
+/* edit */
+.taskForm {
+  padding: 30px;
+  background: #EFEFEF;
+}
