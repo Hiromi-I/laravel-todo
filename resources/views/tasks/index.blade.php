@@ -7,4 +7,6 @@
   @empty
     <p>タスクを追加して下さい。</p>
   @endforelse
+  
+  <a href="{{ route('tasks.create') }}">タスクを追加</a>
 @endsection
