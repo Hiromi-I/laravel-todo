@@ -4,7 +4,7 @@
 @section('content')
   @forelse ($tasks as $task)
     <p>
-      {{ $task->name }} | {{ $task->status_label }} | 
+      {{ $task->name }} | {{ $task->status_label }} | <a href="{{ route('tasks.edit', $task) }}">編集</a>
       <form action="{{ action('TaskController@delete', $task) }}" method="POST">
         @csrf
         @method('DELETE')
