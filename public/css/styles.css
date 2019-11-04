@@ -46,3 +46,32 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* Reset CSS END ===================================== */
+
+/* common */
+.container {
+  padding: 50px 0;
+}
+
+
+/* index */
+.table .taskNameColumn {
+  vertical-align: middle;
+}
+.table .taskStatusColumn {
+  vertical-align: middle;
+  width: 100px;
+}
+.table .taskButtonColumn {
+  width: 100px;
+}
+
+.table .taskEmptyCell {
+  line-height: 300px;
+  text-align: center;
+}
+
+.buttonContainer {
+  text-align: center;
+}
