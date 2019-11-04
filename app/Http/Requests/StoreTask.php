@@ -31,7 +31,7 @@ class StoreTask extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => '1文字以上の文字を入力して下さい。'
+            'name.required' => 'タスク名には1文字以上の文字を入力して下さい。'
         ];
     }
 }

@@ -27,7 +27,7 @@
     </div>
 
     <div class="buttonContainer">
-      <input type="submit" value="Update" class="btn btn-primary btn-lg">
+      <input type="submit" value="更新" class="btn btn-primary btn-lg">
     </div>
   </form>
 
