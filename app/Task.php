@@ -6,21 +6,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
+    const STATUS = [
+        0 => '未着手',
+        1 => '進行中',
+        2 => '完了',
+    ];
+
     protected $fillable = ['name', 'status'];
 
     public function getStatusLabelAttribute()
     {
-        switch($this->attributes['status']) {
-            case 0:
-                return '未着手';
-            case 1:
-                return '進行中';
-            case 2:
-                return '完了';
-            default:
-                return '異常';
+        $status = $this->attributes['status'];
+        if (isset(self::STATUS[$status])) {
+            return self::STATUS[$status];
+        } else {
+            return '異常';
         }
-
-
     }
 }
