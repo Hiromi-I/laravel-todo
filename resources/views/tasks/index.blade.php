@@ -3,7 +3,7 @@
 
 @section('content')
   @forelse ($tasks as $task)
-    <p>{{ $task->name }}</p>
+    <p>{{ $task->name }} | {{ $task->status_label }}</p>
   @empty
     <p>タスクを追加して下さい。</p>
   @endforelse
