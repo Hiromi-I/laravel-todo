@@ -30,6 +30,23 @@ class TaskController extends Controller
         return redirect()->route('tasks.index');
     }
 
+    public function edit(Task $task)
+    {
+        $status_set = Task::STATUS;
+        return view('tasks/edit', [
+            'task' => $task,
+            'status_set' => $status_set,
+        ]);
+    }
+
+    public function update(StoreTask $request, Task $task)
+    {
+        $task->name = $request->name;
+        $task->status = $request->status;
+        $task->save();
+        return redirect()->route('tasks.index');
+    }
+
     public function delete(Task $task)
     {
         $task->delete();
