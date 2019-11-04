@@ -29,4 +29,10 @@ class TaskController extends Controller
         $task->save();
         return redirect()->route('tasks.index');
     }
+
+    public function delete(Task $task)
+    {
+        $task->delete();
+        return redirect()->route('tasks.index');
+    }
 }
